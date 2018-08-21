@@ -1,0 +1,39 @@
+.banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: $black;
+  color: $white;
+  padding: 10px 20px;
+  z-index: 99;
+
+  .nav {
+    background-color: transparent;
+    justify-content: flex-end;
+
+    li {
+      @extend .nav-item;
+
+      a:not(.button) {
+        color: $white;
+      }
+
+      &.menu-item-has-children {
+        ul.sub-menu {
+          display: none;
+          position: absolute;
+          top: 50px;
+          background: black;
+          text-align: left;
+        }
+
+        &:hover {
+          ul.sub-menu {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
