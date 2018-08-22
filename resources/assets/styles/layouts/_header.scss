@@ -8,12 +8,22 @@
   padding: 10px 20px;
   z-index: 99;
 
+  nav.nav-primary {
+    padding: 0 20px;
+  }
+
   .nav {
     background-color: transparent;
     justify-content: flex-end;
 
     li {
       @extend .nav-item;
+
+      border-bottom: solid transparent 5px;
+
+      &:hover {
+        border-bottom-color: $red;
+      }
 
       a:not(.button) {
         color: $white;

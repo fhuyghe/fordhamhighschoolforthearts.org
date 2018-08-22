@@ -1,3 +1,49 @@
 div.wrap.container {
   padding-top: 100px;
 }
+
+.dark {
+  color: $white;
+  background-color: $black;
+
+  .title {
+    color: $white;
+  }
+}
+
+.home {
+  background-color: $black;
+
+  .container {
+    width: auto !important;
+    max-width: none !important;
+  }
+
+  #banner {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  #intro {
+    background-color: $blue;
+    margin-bottom: 0 !important;
+  }
+
+  #testimonial {
+    background-color: $orange;
+  }
+
+  #cte {
+    background-color: $red;
+  }
+
+  .tile.is-parent {
+    padding: 0;
+
+    .tile.is-child {
+      min-height: 300px;
+      color: $white;
+      padding: 20px;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+a.button.is-outlined {
+  background-color: transparent;
+}
+
+a.button.is-inverted {
+  color: $white;
+}
+
+.has-vertically-aligned-content {
+  display: flex;
+  align-items: center;
+}
