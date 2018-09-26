@@ -1,5 +1,23 @@
 div.wrap.container {
-  padding-top: 100px;
+  padding-top: 48px;
+  margin-bottom: 400px;
+  max-width: 100%;
+  width: 100%;
+  .content{
+    min-height: 100vh;
+    position: relative;
+  }
+  .infobox{
+    background-color: $red;
+    color: $white;
+    padding: 50px;
+    h1{
+      color: $white;
+    }
+  }
+    .page-content{
+      padding: 50px;
+    }
 }
 
 .dark {
@@ -11,8 +29,19 @@ div.wrap.container {
   }
 }
 
+/////////////////////////////////
+//// HOME
+/////////////////////////////////
+
 .home {
   background-color: $black;
+
+  div.wrap.container{
+    .content{
+      min-height: auto;
+      background: transparent;
+    }
+  }
 
   .container {
     width: auto !important;
@@ -44,6 +73,46 @@ div.wrap.container {
       min-height: 300px;
       color: $white;
       padding: 20px;
+    }
+  }
+}
+
+/////////////////////////////////
+//// ADMISSIONS
+/////////////////////////////////
+.admissions{
+  .page-content{
+    h1{
+      display: none;
+    }
+  }
+}
+
+/////////////////////////////////
+//// CONTACT
+/////////////////////////////////
+.contact{
+  .content .columns{
+    min-height: 100%;
+    padding-top: 0;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    margin-top: 0;
+    & > div{
+      padding: 100px;
+      &:first-child{
+        background-color: $orange;
+        .group{
+          display: flex;
+          flex-direction: row;
+          margin-bottom: 50px;
+          & > div:first-child {
+            font-size: 1.5em;
+            margin-right: 1em;
+          }
+        }
+      }
     }
   }
 }

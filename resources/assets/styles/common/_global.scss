@@ -1,3 +1,38 @@
+html,
+body {
+  background-color: $black;
+}
+
+.content{
+  background-color: $white;
+  h1,
+  h1:not(:first-child) {
+    margin-top: 0;
+  }
+  h2{
+    &:first-of-type{
+      margin-top: 0;
+    }
+  }
+  h4{
+    color: $blue;
+    margin-bottom: 0;
+  }
+  h5{
+    font-weight: .9em;
+  }
+  h6{
+    color: $blue;
+    font-weight: 600;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+  }
+  .column{
+    padding-bottom: 0;
+  }
+}
+
+
 a.button.is-outlined {
   background-color: transparent;
 }

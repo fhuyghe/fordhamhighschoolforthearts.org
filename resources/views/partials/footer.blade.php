@@ -2,14 +2,14 @@
   <div class="container">
     @php dynamic_sidebar('sidebar-footer') @endphp
     <div class="columns">
-    <div class="column content">
+    <div class="column">
       <?php echo apply_filters( 'the_content', carbon_get_theme_option( 'crb_footer_col1' ) ); ?>
     </div>
-    <div class="column content">
+    <div class="column">
       <?php echo apply_filters( 'the_content', carbon_get_theme_option( 'crb_footer_col2' ) ); ?>
   </div>
   <div class="column">
-    <a class="button">Contact Us</a>
+    <a class="button" href="/contact">Contact Us</a>
 </div>
 <div class="column">
   Map

@@ -1,0 +1,66 @@
+.sidebar{
+    background: $blue;
+    color: $white;
+    h3,
+    h4,
+    strong,
+    a{
+        color: $white;
+    }
+    padding: 50px;
+    .menu{
+        li{
+            list-style: none;
+            font-size: 1.2em;
+            margin-bottom: 1em;
+        }
+        a{
+            color: $white;
+            &:hover{
+                color: $yellow;
+            }
+        }
+    }
+    .button{
+        background-color: $white;
+        color: $blue;
+        border: 0;
+        border-radius: 1em;
+        margin-top: 1em;
+    }
+}
+
+/////////////////////////////////
+//// ADMISSIONS
+/////////////////////////////////
+.admissions{
+    .sidebar{
+        color: $black;
+        h3,
+        h4,
+        strong,
+        a{
+            color: $black;
+        }
+        background: transparent;
+        padding: 0;
+        & > div{
+            background-color: $lightgrey;
+            padding: 50px;
+        }
+        .button{
+            background-color: $blue;
+            color: $white;
+        }
+    }
+}
+
+/////////////////////////////////
+//// Resources
+/////////////////////////////////
+
+.resources{
+    .sidebar{
+      background-color: $cyan;
+    }
+  }

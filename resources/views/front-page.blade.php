@@ -81,7 +81,5 @@
                     </div>
           </div>
     </div>
-
-    @include('partials.content-page')
   @endwhile
 @endsection

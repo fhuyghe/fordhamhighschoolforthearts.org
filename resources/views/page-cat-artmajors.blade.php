@@ -1,3 +1,13 @@
+@php
+/**
+ * Template Name: Art Major Page
+ *
+ * @package WordPress
+ * @subpackage Twenty_Fourteen
+ * @since Twenty Fourteen 1.0
+ */
+@endphp
+
 @extends('layouts.app')
 
 @section('content')
@@ -9,13 +19,8 @@
         <div class="column is-8">
             @include('partials.content-page')
         </div>
-        <div id="tribe-events-pg-template">
-          <?php tribe_events_before_html(); ?>
-          <?php tribe_get_view(); ?>
-          <?php tribe_events_after_html(); ?>
-          </div>
         <div class="sidebar column is-4">
-            @include('partials.sidebar')
+            @include('partials.sidebar-artmajors')
         </div>
     </div>
   @endwhile

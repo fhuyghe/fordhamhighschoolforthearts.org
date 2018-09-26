@@ -21,12 +21,14 @@
 
       border-bottom: solid transparent 5px;
 
-      &:hover {
-        border-bottom-color: $red;
-      }
+      a {
+        &:not(.button) {
+          color: $white;
 
-      a:not(.button) {
-        color: $white;
+          &:hover {
+            color: inherit;
+          }
+        }
       }
 
       &.menu-item-has-children {
@@ -34,8 +36,28 @@
           display: none;
           position: absolute;
           top: 50px;
-          background: black;
           text-align: left;
+          z-index: -1;
+
+          &::before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            opacity: .9;
+            position: absolute;
+            transform: scaleX(1000);
+            left: 0;
+            top: 0;
+            z-index: -1;
+          }
+
+          li {
+            border-bottom: 0;
+
+            &:hover {
+              border-bottom: 0;
+            }
+          }
         }
 
         &:hover {
@@ -44,6 +66,112 @@
           }
         }
       }
+
+      &:nth-child(1) {
+        &:hover {
+          border-bottom-color: $blue;
+        }
+
+        &.menu-item-has-children {
+          ul.sub-menu {
+            &::before{
+              background: $blue;
+            }
+          }
+        }
+      }
+
+      &:nth-child(2) {
+        &:hover {
+          border-bottom-color: $red;
+        }
+
+        &.menu-item-has-children {
+          ul.sub-menu {
+            &::before{
+              background: $red;
+            }
+          }
+        }
+      }
+
+      &:nth-child(3) {
+        &:hover {
+          border-bottom-color: $orange;
+        }
+
+        &.menu-item-has-children {
+          ul.sub-menu {
+            &::before{
+              background: $orange;
+            }
+          }
+        }
+      }
+
+      &:nth-child(4) {
+        &:hover {
+          border-bottom-color: $purple;
+        }
+
+        &.menu-item-has-children {
+          ul.sub-menu {
+            &::before{
+              background: $purple;
+            }
+          }
+        }
+      }
+
+      &:nth-child(5) {
+        &:hover {
+          border-bottom-color: $cyan;
+        }
+
+        &.menu-item-has-children {
+          ul.sub-menu {
+            &::before{
+              background: $cyan;
+            }
+          }
+        }
+      }
+
+      &:nth-child(6) {
+        &:hover {
+          border-bottom-color: $blue;
+        }
+
+        &.menu-item-has-children {
+          ul.sub-menu {
+            &::before{
+              background: $blue;
+            }
+          }
+        }
+      }
+
+      &:nth-child(7) {
+        &:hover {
+          border-bottom-color: $red;
+        }
+
+        &.menu-item-has-children {
+          ul.sub-menu {
+            &::before{
+              background: $red;
+            }
+          }
+        }
+      }
     }
   }
 }
+
+.page-header{ 
+  min-height: 400px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+

@@ -1,2 +1,5 @@
-@php the_content() @endphp
-{!! wp_link_pages(['echo' => 0, 'before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']) !!}
+<div class="page-content">
+    @php foreach((get_the_category()) as $category) { echo '<h6>' . $category->cat_name . '</h6>'; }  @endphp
+    <h1>{!! App::title() !!}</h1>
+    @php the_content() @endphp
+</div>
