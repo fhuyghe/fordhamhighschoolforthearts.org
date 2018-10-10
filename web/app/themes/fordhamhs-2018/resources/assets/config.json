@@ -9,7 +9,7 @@
     ]
   },
   "publicPath": "/wp-content/themes/fordham-2018",
-  "devUrl": "http://fordhamhs",
+  "devUrl": "http://fordhamhs.test",
   "proxyUrl": "http://localhost:3000",
   "cacheBusting": "[name]_[hash:8]",
   "watch": [
