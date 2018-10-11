@@ -1,6 +1,7 @@
 html,
 body {
   background-color: $black;
+  font-family: 'ApercuProtestRegular', sans-serif;
 }
 
 .content{
@@ -44,4 +45,26 @@ a.button.is-inverted {
 .has-vertically-aligned-content {
   display: flex;
   align-items: center;
+}
+
+
+//fonts
+
+@font-face {
+  font-family: 'ApercuProtestRegular';
+  font-display: auto;
+  src: url('../fonts/ApercuPro.eot?#iefix') format('embedded-opentype'),  url('../fonts/ApercuPro.otf')  format('opentype'),
+	     url('../fonts/ApercuPro.woff') format('woff'), url('../fonts/ApercuPro.ttf')  format('truetype'), url('../fonts/ApercuPro.svg#ApercuPro') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+
+//Wordpress Admin Bar
+.admin-bar{
+  header.banner{
+    margin-top: 32px;
+  }
 }

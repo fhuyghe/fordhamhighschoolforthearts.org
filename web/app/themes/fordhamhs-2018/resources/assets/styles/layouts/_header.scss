@@ -16,6 +16,10 @@
     background-color: transparent;
     justify-content: flex-end;
 
+    & > li{
+      padding: 2.1rem 0.75rem;
+    }
+
     li {
       @extend .nav-item;
 
@@ -35,7 +39,7 @@
         ul.sub-menu {
           display: none;
           position: absolute;
-          top: 50px;
+          top: 71px;
           text-align: left;
           z-index: -1;
 
