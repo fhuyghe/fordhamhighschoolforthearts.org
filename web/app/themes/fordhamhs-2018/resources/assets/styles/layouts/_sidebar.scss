@@ -7,6 +7,9 @@
     a{
         color: $white;
     }
+    h3{
+        margin-top: 20px;
+    }
     padding: 50px;
     .menu{
         li{
@@ -27,6 +30,10 @@
         border: 0;
         border-radius: 1em;
         margin-top: 1em;
+        &.search-submit{
+            margin-top: 0;
+            margin-left: 10px;
+        }
     }
 }
 

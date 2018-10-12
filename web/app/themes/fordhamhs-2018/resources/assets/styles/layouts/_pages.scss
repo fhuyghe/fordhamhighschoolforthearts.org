@@ -1,7 +1,7 @@
 
 
 div.wrap.container {
-  padding-top: 48px;
+  padding-top: 71px;
   margin-bottom: 400px;
   max-width: 100%;
   width: 100%;
@@ -19,6 +19,13 @@ div.wrap.container {
   }
     .page-content{
       padding: 50px;
+    }
+
+    .search-content{
+      padding: 50px;
+      article{
+        margin-bottom: 30px;
+      }
     }
 }
 

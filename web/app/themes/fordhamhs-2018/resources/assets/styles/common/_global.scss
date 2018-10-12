@@ -1,7 +1,7 @@
 html,
 body {
   background-color: $black;
-  font-family: 'ApercuProtestRegular', sans-serif;
+  font-family: 'ApercuProRegular', sans-serif;
 }
 
 .content{
@@ -51,7 +51,7 @@ a.button.is-inverted {
 //fonts
 
 @font-face {
-  font-family: 'ApercuProtestRegular';
+  font-family: 'ApercuProRegular';
   font-display: auto;
   src: url('../fonts/ApercuPro.eot?#iefix') format('embedded-opentype'),  url('../fonts/ApercuPro.otf')  format('opentype'),
 	     url('../fonts/ApercuPro.woff') format('woff'), url('../fonts/ApercuPro.ttf')  format('truetype'), url('../fonts/ApercuPro.svg#ApercuPro') format('svg');

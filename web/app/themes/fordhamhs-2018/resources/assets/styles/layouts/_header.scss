@@ -42,6 +42,7 @@
           top: 71px;
           text-align: left;
           z-index: -1;
+          padding: 20px;
 
           &::before {
             content: '';
@@ -57,9 +58,15 @@
 
           li {
             border-bottom: 0;
+            a{
+              transition: .3s;
+            }
 
             &:hover {
               border-bottom: 0;
+              a{
+                transform: translateX(-20px);
+              }
             }
           }
         }
