@@ -19,6 +19,9 @@ class FrontPage extends Controller
 
     public function topImage() {
         return get_field('top_image');
+	}
+	
+	public function video() {
+        return get_field('video');
     }
-    
 }

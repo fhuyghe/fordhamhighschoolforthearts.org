@@ -7,11 +7,20 @@
       <div class="tile">
         <div class="tile is-parent">
             <div id="banner" class="tile is-child dark" style="background-image:url({{ $top_image['url'] }})">
+              
+              @if( $video['video_mp4'] )
+              <div class="video">
+                <video autoplay muted loop poster="{{ $video['video_poster'] }}">
+                  <source type="video/mp4" src="{{ $video['video_mp4'] }}" />
+                  <source type="video/ogg" src="{{ $video['video_ogg'] }}" />
+                  <source type="video/webm" src="{{ $video['video_webm'] }}" />
+                </video>
+              </div>
+              @endif
+
+              <div class="gradient"></div>
               <div class="content"> 
-                <p class="title"><?php echo carbon_get_the_post_meta( 'intro' ); ?></p>
-                <div class="content">
-                  <!-- Content -->
-                </div>
+                <p><?php echo carbon_get_the_post_meta( 'intro' ); ?></p>
               </div>
             </div>
           </div>
@@ -19,7 +28,7 @@
                       <div id="intro" class="tile is-child has-vertically-aligned-content">
                         <div class="content">
                           <p><?php echo carbon_get_the_post_meta( 'audition' ); ?></p>
-                          <a class="button is-outlined is-inverted" href="/audition">Audition</a>
+                          <a class="button is-outlined is-inverted" href="/admissions">Admissions</a>
                         </div>
                       </div>
                         <div id="testimonial" class="tile is-child has-vertically-aligned-content">
@@ -49,7 +58,9 @@
           <div class="artmajors">
 <!-- 
               @while($art_pages->have_posts()) @php($art_pages->the_post())
-            --><div class="artmajor" style="background-image: url('{!! get_the_post_thumbnail_url(get_the_ID(),'full'); !!}')">
+            --><div class="artmajor">
+              <img src="{!! get_the_post_thumbnail_url(get_the_ID(),'full'); !!}" />
+              <div class="gradient"></div>
                 <a href="{!! the_permalink() !!}" class="wrap">
                     <h2>{!! get_the_title() !!}</h2>
                 </a>

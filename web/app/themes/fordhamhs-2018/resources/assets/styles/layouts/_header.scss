@@ -8,6 +8,11 @@
   padding: 10px 20px;
   z-index: 99;
 
+  .logo{
+    float: left;
+    max-width: 250px
+  }
+
   nav.nav-primary {
     padding: 0 20px;
   }
@@ -17,7 +22,7 @@
     justify-content: flex-end;
 
     & > li{
-      padding: 2.1rem 0.75rem;
+      padding: 31px 0.75rem;
     }
 
     li {
@@ -39,7 +44,7 @@
         ul.sub-menu {
           display: none;
           position: absolute;
-          top: 71px;
+          top: 65px;
           text-align: left;
           z-index: -1;
           padding: 20px;

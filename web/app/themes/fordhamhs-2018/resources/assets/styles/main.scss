@@ -9,8 +9,8 @@
  * Prefix your imports with `~` to grab from node_modules/
  * @see https://github.com/webpack-contrib/sass-loader#imports
  */
-// @import "~some-node-module";
-
+ @import "~normalize.css/normalize.css";
+ 
 /** Import theme styles */
 @import "common/global";
 @import "components/buttons";

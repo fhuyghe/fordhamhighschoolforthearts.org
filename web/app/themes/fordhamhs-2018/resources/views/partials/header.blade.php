@@ -1,6 +1,5 @@
 <header class="banner">
-  <div class="columns">
-    <div class="column is-2">
+    <div class="logo">
       <a class="brand" href="{{ home_url('/') }}" alt="{{ get_bloginfo('name', 'display') }}">
         <img src="@asset('images/FordhamHS-Logo.png')" />
       </a>
@@ -10,5 +9,4 @@
         {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']) !!}
       @endif
     </nav>
-  </div>
 </header>

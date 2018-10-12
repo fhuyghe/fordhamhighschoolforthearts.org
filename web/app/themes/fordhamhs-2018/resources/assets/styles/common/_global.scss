@@ -34,12 +34,25 @@ body {
 }
 
 
-a.button.is-outlined {
-  background-color: transparent;
+a.button{
+  font-weight: 600;
+  padding: 20px;
+  border-radius: 20px;
+  &.is-outlined {
+    background-color: transparent;
+    border-radius: 20px;
+    border-width: 2px;
+    letter-spacing: .05em;
+    &:hover{
+      background-color: $white;
+      color: $blue;
+    }
+  }
 }
 
 a.button.is-inverted {
   color: $white;
+  border-color: $white;
 }
 
 .has-vertically-aligned-content {
