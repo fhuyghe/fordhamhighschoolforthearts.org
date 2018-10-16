@@ -4,6 +4,11 @@ body {
   font-family: 'ApercuProRegular', sans-serif;
 }
 
+//in Admin editor
+body#tinymce{
+  background-color: $white;
+}
+
 .content{
   background-color: $white;
   h1,

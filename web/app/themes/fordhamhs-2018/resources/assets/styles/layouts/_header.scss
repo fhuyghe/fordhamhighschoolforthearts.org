@@ -27,8 +27,23 @@
 
     li {
       @extend .nav-item;
-
       border-bottom: solid transparent 5px;
+
+      &.search{
+        &:hover{
+          a:not(.button){
+            color: $yellow;
+          }
+        }
+      }
+
+      &.active a:not(.button){
+        color: $yellow;
+
+        &:hover{
+          color: $yellow;
+        }
+      }
 
       a {
         &:not(.button) {
@@ -189,5 +204,45 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+
+.search{
+
+  &.active{
+    form{
+      top: 76px;
+    }
+  }
+
+  form{
+    left: 0;
+    top: 0px;
+    width: 100%;
+    background-color: $yellow;
+    display: flex;
+    flex-flow: row wrap;
+    position: fixed;
+    box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.31);
+    transition: .3s;
+    z-index: 98;
+
+    .search-field{
+      background-color: transparent;
+      border: 0;
+      font-size: 30px;
+    }
+
+    label{
+      flex: 9;
+    }
+    
+    .search-submit{
+      flex: 1;
+      border-radius: 0;
+      border: 0;
+      font-size: 30px;
+      max-width: 200px;
+    }
+  }
 }
 

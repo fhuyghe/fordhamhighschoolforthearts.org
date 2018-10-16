@@ -31,7 +31,7 @@
                           <a class="button is-outlined is-inverted" href="/admissions">Admissions</a>
                         </div>
                       </div>
-                        <div id="testimonial" class="tile is-child has-vertically-aligned-content">
+                        <div class="tile is-child has-vertically-aligned-content testimonial">
                             <div class="content">
                               <p><?php echo carbon_get_the_post_meta( 'quote' ); ?></p>
                               <h4><?php echo carbon_get_the_post_meta( 'author' ); ?></h4>
@@ -50,8 +50,11 @@
           </div>
           </div>
           <div class="tile is-parent">
-              <div class="tile is-child">
-                  <p>Upcoming Event: Into the Woods Musical</p>
+              <div id="nextEvent" class="tile is-child">
+                  <img src="{{ $event_thumbnail}}" />
+                  <a href="{!! home_url() !!}/calendar" class="wrap">
+                    <h2>Events</h2>
+                  </a>
                 </div>
             </div>
     </div>

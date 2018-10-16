@@ -12,11 +12,6 @@
         <div class="sidebar column is-4">
             @include('partials.sidebar')
         </div>
-        <div id="tribe-events-pg-template">
-          <?php tribe_events_before_html(); ?>
-          <?php tribe_get_view(); ?>
-          <?php tribe_events_after_html(); ?>
-        </div>
     </div>
   @endwhile
 @endsection

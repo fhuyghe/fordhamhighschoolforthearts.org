@@ -23,5 +23,10 @@ class FrontPage extends Controller
 	
 	public function video() {
         return get_field('video');
-    }
+	}
+
+	public function eventThumbnail() {
+        return get_field('event_thumbnail');
+	}
+	
 }

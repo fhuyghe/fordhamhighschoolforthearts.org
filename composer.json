@@ -46,7 +46,7 @@
     "roots/wp-config": "1.0.0",
     "wpackagist-plugin/advanced-custom-fields": "^5.7",
     "wpackagist-plugin/google-apps-login": "^3.2",
-    "wpackagist-plugin/the-events-calendar": "^4.6",
+    "wpackagist-plugin/the-events-calendar": "4.6.24.1",
     "wpackagist-plugin/wpforms-lite": "^1.4",
     "wpackagist-plugin/wordpress-seo": "^8.3",
     "deliciousbrains-plugin/wp-migrate-db-pro": "1.8.4",
