@@ -96,6 +96,10 @@ add_action('widgets_init', function () {
         'id'            => 'sidebar-admissions'
     ] + $config);
     register_sidebar([
+        'name'          => __('Calendar', 'sage'),
+        'id'            => 'sidebar-calendar'
+    ] + $config);
+    register_sidebar([
         'name'          => __('Resources', 'sage'),
         'id'            => 'sidebar-resources'
     ] + $config);

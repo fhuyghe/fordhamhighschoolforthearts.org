@@ -22,7 +22,7 @@
         </div>
 
         <div class="sidebar column is-4">
-            @include('partials.sidebar')
+            @php dynamic_sidebar('sidebar-calendar') @endphp
         </div>
 
     </div>
