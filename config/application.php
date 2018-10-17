@@ -69,6 +69,11 @@ define('LOGGED_IN_SALT', env('LOGGED_IN_SALT'));
 define('NONCE_SALT', env('NONCE_SALT'));
 
 /**
+ * Strip invalid text to move database
+ */
+define( 'WPMDB_STRIP_INVALID_TEXT', true );
+
+/**
  * Custom Settings
  */
 define('AUTOMATIC_UPDATER_DISABLED', true);
