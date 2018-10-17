@@ -1,6 +1,7 @@
 body {
   background-color: $black;
   font-family: 'ApercuProRegular', sans-serif;
+  overflow-x: hidden;
 }
 
 //in Admin editor
@@ -8,7 +9,14 @@ body#tinymce{
   background-color: $white;
 }
 
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
 .content{
+  position: relative;
   background-color: $white;
   h1,
   h1:not(:first-child) {
@@ -32,11 +40,14 @@ body#tinymce{
     font-size: 1.2em;
     margin-bottom: 5px;
   }
-  .column{
-    padding-bottom: 0;
-  }
 }
 
+p{
+  margin-bottom: 20px;
+  &:last-child{
+    margin-bottom: 0;
+  }
+}
 
 a.button{
   font-weight: 600;
@@ -64,6 +75,14 @@ a.button.is-inverted {
   align-items: center;
 }
 
+.centered{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .wrap{
+    width: 100%;
+  }
+}
 
 //fonts
 
@@ -76,6 +95,13 @@ a.button.is-inverted {
   font-style: normal;
 }
 
+//Forms weird styling fix
+div.wpforms-container-full .wpforms-form input.wpforms-field-medium, 
+div.wpforms-container-full .wpforms-form select.wpforms-field-medium, 
+div.wpforms-container-full .wpforms-form .wpforms-field-row.wpforms-field-medium{
+  max-width: none!important;
+}
+
 
 
 
@@ -83,5 +109,18 @@ a.button.is-inverted {
 .admin-bar{
   header.banner{
     margin-top: 32px;
+  }
+}
+
+
+@media only screen and (min-width: 600px) {
+  body{
+    overflow-x: initial;
+  }
+  .content{
+    min-height: 100vh;
+    .column{
+      padding-bottom: 0;
+    }
   }
 }

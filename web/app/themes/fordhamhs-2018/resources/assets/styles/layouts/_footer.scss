@@ -1,14 +1,37 @@
 footer.footer {
-  position: fixed;
-  width: 100%;
-  bottom: 0;
-  left: 0;
   background-color: $black;
-  padding: 50px;
+  padding: 50px 20px 20px;
   color: $white;
-  z-index: -1;
 
   strong {
     color: $white;
+  }
+
+  .column{
+    margin-bottom: 20px;
+  }
+
+  .copyrights{
+    font-size: .8em;
+    margin-top: 20px;
+    a{
+      color: $yellow;
+
+      &:hover{
+        color: $red;
+      }
+    }
+  }
+}
+
+
+@media only screen and (min-width: 600px) {
+  footer.footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    padding: 50px;
+    z-index: -1;
   }
 }

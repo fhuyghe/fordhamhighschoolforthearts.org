@@ -28,8 +28,10 @@ add_action( 'carbon_fields_register_fields', function () {
     Container::make( 'theme_options', __( 'Theme Options', 'crb' ) )
         ->add_fields( array(
             Field::make( 'rich_text', 'crb_footer_copyright', 'Copyright' ),
-            Field::make( 'rich_text', 'crb_footer_col1', 'Column 1' ),
-            Field::make( 'rich_text', 'crb_footer_col2', 'Column 2' ),
+            Field::make( 'rich_text', 'crb_address', 'Address' ),
+            Field::make( 'text', 'crb_phone', 'Phone' ),
+            Field::make( 'text', 'crb_fax', 'Fax' ),
+            Field::make( 'rich_text', 'crb_footer_col2', 'Public Transportation' ),
         ) );
 
 });

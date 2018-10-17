@@ -2,13 +2,8 @@
 
 div.wrap.container {
   margin-top: 65px;
-  margin-bottom: 300px;
   max-width: 100%;
   width: 100%;
-  .content{
-    min-height: 100vh;
-    position: relative;
-  }
   .infobox{
     background-color: $red;
     color: $white;
@@ -18,7 +13,7 @@ div.wrap.container {
     }
   }
     .page-content{
-      padding: 50px 50px 100px;
+      padding: 50px 20px;
     }
 
     .search-content{
@@ -70,7 +65,7 @@ div.gradient{
 }
 
 /////////////////////////////////
-//// HOME
+//// HOME - MOBILE
 /////////////////////////////////
 
 .home {
@@ -118,7 +113,8 @@ div.gradient{
     p{
       font-weight: 600;
       margin-bottom: 0;
-      font-size: 2.5em;
+      font-size: 1.4em;
+      padding-top: 200px;
     }
   }
 
@@ -205,24 +201,12 @@ div.gradient{
   .artmajors {
 
     .artmajor{
-      display: inline-block;
       position: relative;
-      width: 33.33%;
       min-height: 300px;
       color: $white;
       padding: 20px;
       background-size: cover;
       overflow: hidden;
-
-      &:hover{
-        a.wrap{
-          //background: rgba(0,0,0,.5);
-        }
-        img{
-          transform: translate(-50%, -50%) scale(1.1);
-          opacity: 1;
-        }
-      }
 
       img{
         height: 100%;
@@ -256,6 +240,24 @@ div.gradient{
   }
 }
 
+/////////////////////////////////
+//// LOGIN
+/////////////////////////////////
+.page.login{
+  .centered{
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    background: $orange;
+
+    .loginWrap{
+      background: $white;
+      padding: 20px;
+      border-radius: 10px;
+    }
+  }
+}
+
 
 /////////////////////////////////
 //// ABOUT
@@ -275,7 +277,6 @@ div.gradient{
   .page-content{
     .wrap{
       max-width: 800px;
-      font-size: 20px;
     }
   }
 
@@ -305,7 +306,7 @@ div.gradient{
 }
 
 /////////////////////////////////
-//// ADMISSIONS
+//// CALENDAR
 /////////////////////////////////
 
 .page-template-page-calendar-blade-php{
@@ -357,6 +358,25 @@ div.gradient{
 //// ADMISSIONS
 /////////////////////////////////
 .admissions{
+  .columns{
+    display: flex;
+    flex-direction: column;
+    .column{
+      &:nth-child(1){
+        order: 3;
+      }
+      &:nth-child(2){
+        order: 1;
+      }
+      &:nth-child(3){
+        order: 4;
+      }
+      &:nth-child(4){
+        order: 2;
+      }
+    }
+  }
+
   .page-content{
     h1{
       display: none;
@@ -387,6 +407,78 @@ div.gradient{
             font-size: 1.5em;
             margin-right: 1em;
           }
+        }
+      }
+    }
+
+    #formContainer{
+      .wrap{
+        max-width: 600px;
+      }
+    }
+  }
+}
+
+
+@media only screen and (min-width: 1024px) {
+  div.wrap.container {
+    margin-bottom: 300px;
+
+    .page-content{
+      padding: 50px 50px 100px;
+    }
+  }
+
+  /////////////////////////////////
+  //// HOME - DESKTOP
+  /////////////////////////////////
+
+  .home {
+    #banner{
+      p{
+        font-size: 2.5em;
+      }
+    }
+
+    .artmajor{
+      display: inline-block;
+      position: relative;
+      width: 33.33%;
+      color: $white;
+      padding: 20px;
+      background-size: cover;
+      overflow: hidden;
+
+      &:hover{
+        a.wrap{
+          //background: rgba(0,0,0,.5);
+        }
+        img{
+          transform: translate(-50%, -50%) scale(1.1);
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  /////////////////////////////////
+  //// ADMISSIONS - DESKTOP
+  /////////////////////////////////
+  .admissions{
+    .columns{
+      flex-direction: initial;
+      .column{
+        &:nth-child(1){
+          order: 1;
+        }
+        &:nth-child(2){
+          order: 2;
+        }
+        &:nth-child(3){
+          order: 3;
+        }
+        &:nth-child(4){
+          order: 4;
         }
       }
     }

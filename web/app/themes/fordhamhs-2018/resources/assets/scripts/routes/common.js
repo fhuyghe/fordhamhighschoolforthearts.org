@@ -1,7 +1,11 @@
 function resize() {
+  var width = $(window).width();
   var headerHeight = $('header.banner').outerHeight();
+  var footerHeight = $('footer.footer').outerHeight();
 
-  $('.wrap.container').css('margin-top', headerHeight);
+  if (width >= 1024){
+    $('.wrap.container').css('margin', headerHeight + 'px 0 ' + footerHeight + 'px');
+  }
 }
 
 export default {
@@ -10,6 +14,11 @@ export default {
 
     $(window).resize(function(){
       resize();
+    });
+
+    //Hamburger Menu
+    $('.hamburger').click(function(){
+      $('nav.nav-primary.mobile').toggleClass('active');
     });
 
     $('li.search').click(function(event){
@@ -22,9 +31,12 @@ export default {
   finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired
 
-    $(window).load(function() {
+    $(window).on('load',(function() {
       resize();
-    })
+    }));
+    $(window).on('resize',(function() {
+      resize();
+    }));
 
   },
 };

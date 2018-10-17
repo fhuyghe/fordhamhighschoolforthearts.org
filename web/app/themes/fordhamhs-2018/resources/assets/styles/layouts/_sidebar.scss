@@ -1,7 +1,6 @@
 .sidebar{
     background: $blue;
     color: $white;
-    min-height: 100vh;
     h3,
     h4,
     strong,
@@ -73,3 +72,9 @@
       background-color: $cyan;
     }
   }
+
+@media only screen and (min-width: 600px) {
+    .sidebar{
+        min-height: 100vh;
+    }
+}
