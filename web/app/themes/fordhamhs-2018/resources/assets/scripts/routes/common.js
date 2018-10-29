@@ -27,6 +27,13 @@ export default {
       $('.search').toggleClass('active');
 
     });
+
+    //Initiate Slick Carousels
+    $('section.gallery').slick({
+      adaptiveHeight: true,
+      dots: true,
+      //autoplay: true,
+    });
   },
   finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired
