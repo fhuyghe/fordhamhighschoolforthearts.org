@@ -29,6 +29,20 @@
             </div>
         </div>
         <div class="column is-12 bottomBanner" style="background-image: url('{{ $variables->bottomImage }}')"></div>
+        <div class="column is-12 staff">
+          <div class="page-content">
+            <h2>Staff</h2>
+            <div class="wrap">
+              @php if( have_rows('staff') ): while ( have_rows('staff') ) : the_row(); @endphp
+              <div class="staffGroup">
+                <h6>@php the_sub_field('title'); @endphp</h6>
+                <p>@php the_sub_field('list'); @endphp</p>
+              </div>
+
+          @php endwhile; endif; @endphp
+            </div>
+          </div>
+        </div>
     </div>
   @endwhile
 @endsection

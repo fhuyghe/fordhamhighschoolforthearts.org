@@ -19,25 +19,33 @@
                 <div class="group">
                     <div><i class="fal fa-map-marker-alt"></i></div>
                     <div>
+                        <h6>Address</h6>
                         <?php echo apply_filters( 'the_content', carbon_get_theme_option( 'crb_address' ) ); ?>
                     </div> 
                 </div>
                 <div class="group">
                     <div><i class="fal fa-phone"></i></div>
                     <div>
+                            <h6>Phone</h6>
                         <?php echo carbon_get_theme_option( 'crb_phone' ); ?> 
                     </div>
                 </div>
                 <div class="group">
                     <div><i class="fal fa-fax"></i></div>
                     <div>
+                        <h6>Fax</h6>
                         <?php echo carbon_get_theme_option( 'crb_fax' ); ?> 
                     </div>
                 </div>
+                @php /*
                 <div class="group">
                     <div><i class="fal fa-envelope"></i></div>
-                    <div>Email</div>
+                    <div>
+                        <h6>Email</h6>
+                    </div>
                 </div>
+                */ @endphp
+
             </div>
         </div>
         <div id="formContainer" class="column is-8 centered">

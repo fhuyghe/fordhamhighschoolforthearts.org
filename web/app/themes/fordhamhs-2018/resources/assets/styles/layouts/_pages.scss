@@ -312,11 +312,16 @@ div.gradient{
 .page.about{
   .missionStatement{
     background-color: $orange;
-    padding: 100px 50px;
+    padding: 100px 60px;
     font-size: 20px;
+    color: $black;
 
     .wrap{
       max-width: 800px;
+
+      h2{
+        color: $black;
+      }
     }
   }
 
@@ -348,6 +353,21 @@ div.gradient{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+  }
+
+  .staff{
+    .wrap{
+
+      .staffGroup{
+        padding-bottom: 30px;
+        break-inside: avoid;
+
+        h6{
+          font-size: 1em;
+          color: $black;
+        }
+      }
+    }
   }
 }
 
@@ -441,14 +461,28 @@ div.gradient{
     position: absolute;
     top: 0;
     margin-top: 0;
+
     & > div{
       padding: 100px;
       &:first-child{
         background-color: $orange;
+        color: $black;
+
+        h1{
+          color: $black;
+        }
+
         .group{
           display: flex;
           flex-direction: row;
           margin-bottom: 50px;
+
+          h6{
+            font-weight: 600;
+            font-size: 1em;
+            color: $black;
+          }
+
           & > div:first-child {
             font-size: 1.5em;
             margin-right: 1em;
@@ -460,6 +494,22 @@ div.gradient{
     #formContainer{
       .wrap{
         max-width: 600px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 600px) {
+
+/////////////////////////////////
+  //// ABOUT - TABLET
+  /////////////////////////////////
+  .page.about{
+    .staff{
+      .wrap{
+        columns: 2;
+        column-gap: 20px;
+        max-width: 100%;
       }
     }
   }
@@ -503,6 +553,17 @@ div.gradient{
           transform: translate(-50%, -50%) scale(1.1);
           opacity: 1;
         }
+      }
+    }
+  }
+
+  /////////////////////////////////
+  //// ABOUT - DESKTOP
+  /////////////////////////////////
+  .page.about{
+    .staff{
+      .wrap{
+        columns: 3;
       }
     }
   }

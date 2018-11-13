@@ -14,7 +14,8 @@ class PageAbout extends Controller
             'author' => get_field('author'),
             'authorTitle' => get_field('author_title'),
             'rightImage' => get_field('right_image'),
-            'bottomImage' => get_field('bottom_image')
+            'bottomImage' => get_field('bottom_image'),
+            'staff' => get_field('staff')
         );
 	}
 	
