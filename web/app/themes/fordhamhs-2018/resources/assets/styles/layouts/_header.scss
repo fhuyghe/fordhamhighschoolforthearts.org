@@ -18,7 +18,16 @@
   }
 
   .hamburger{
-    display: none;
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 14px;
+    font-size: 30px;
+    cursor: pointer;
+
+    &:hover{
+      color: $yellow;
+    }
   }
 }
 
@@ -33,7 +42,6 @@
   li {
     @extend .nav-item;
     border-bottom: solid transparent 5px;
-    justify-content: left;
 
     &.active a:not(.button){
       color: $yellow;
@@ -57,7 +65,7 @@
         top: 65px;
         text-align: left;
         z-index: -1;
-        padding: 20px 0;
+        padding: 20px;
 
         &::before {
           content: '';
@@ -73,26 +81,14 @@
 
         li {
           border-bottom: 0;
-          padding-left: 0;
-
           a{
             transition: .3s;
           }
         }
       }
-
-      &:hover {
-        ul.sub-menu {
-          display: block;
-        }
-      }
     }
 
     &:nth-child(1) {
-      &:hover {
-        border-bottom-color: $blue;
-      }
-
       &.menu-item-has-children {
         ul.sub-menu {
           &::before{
@@ -103,10 +99,6 @@
     }
 
     &:nth-child(2) {
-      &:hover {
-        border-bottom-color: $red;
-      }
-
       &.menu-item-has-children {
         ul.sub-menu {
           &::before{
@@ -117,10 +109,6 @@
     }
 
     &:nth-child(3) {
-      &:hover {
-        border-bottom-color: $orange;
-      }
-
       &.menu-item-has-children {
         ul.sub-menu {
           &::before{
@@ -131,10 +119,6 @@
     }
 
     &:nth-child(4) {
-      &:hover {
-        border-bottom-color: $purple;
-      }
-
       &.menu-item-has-children {
         ul.sub-menu {
           &::before{
@@ -145,10 +129,6 @@
     }
 
     &:nth-child(5) {
-      &:hover {
-        border-bottom-color: $cyan;
-      }
-
       &.menu-item-has-children {
         ul.sub-menu {
           &::before{
@@ -159,10 +139,6 @@
     }
 
     &:nth-child(6) {
-      &:hover {
-        border-bottom-color: $blue;
-      }
-
       &.menu-item-has-children {
         ul.sub-menu {
           &::before{
@@ -173,10 +149,6 @@
     }
 
     &:nth-child(7) {
-      &:hover {
-        border-bottom-color: $red;
-      }
-
       &.menu-item-has-children {
         ul.sub-menu {
           &::before{
@@ -240,10 +212,7 @@ nav.nav-primary.mobile{
 }
 
 
-
-////////////////////////
-// MOBILE
-////////////////////////
+// MOBILE ONLY
 @media only screen and (max-width: 600px) {
   nav.nav-primary.desktop{
     display: none;
@@ -273,34 +242,6 @@ nav.nav-primary.mobile{
       padding: 100px 20px 50px;
       text-align: left;
 
-      .search.menu-item{
-        display: none;
-      }
-
-      li{
-        &.active a:not(.button){
-          &:hover{
-            color: $yellow;
-          }
-        }
-
-        &.search{
-          &:hover{
-            a:not(.button){
-              color: $yellow;
-            }
-          }
-        }
-
-        a {
-          &:not(.button) {
-            &:hover {
-              color: inherit;
-            }
-          }
-        }
-      }
-
       & > li{
         width: 100%;
         font-size: 25px;
@@ -320,15 +261,6 @@ nav.nav-primary.mobile{
             padding: 10px 20px;
             z-index: 1;
 
-            li{
-              &:hover {
-                border-bottom: 0;
-                a{
-                  transform: translateX(-20px);
-                }
-              }
-            }
-
             &:before{
               content: none;
             }
@@ -342,20 +274,113 @@ nav.nav-primary.mobile{
     }
   }
 
-  .banner{
+  .page-header{
+    min-height: 200px;
+  }
+}
 
+//BIGGER SCREENS ONLY
+@media only screen and (min-width: 600px) {
+  .banner{
     .hamburger{
-      display: block;
-      position: absolute;
-      right: 20px;
-      top: 14px;
-      font-size: 30px;
-      cursor: pointer;
+      display: none;
+    }
+  }
+
+  .nav {
+    li {
+      &.search{
+        &:hover{
+          a:not(.button){
+            color: $yellow;
+          }
+        }
+      }
   
-      &:hover{
-        color: $yellow;
+      &.active a:not(.button){
+  
+        &:hover{
+          color: $yellow;
+        }
+      }
+  
+      a {
+        &:not(.button) {
+          &:hover {
+            color: inherit;
+          }
+        }
+      }
+  
+      &.menu-item-has-children {
+  
+        &> a{
+          cursor: default;
+        }
+  
+        ul.sub-menu {
+          li {
+            a{
+              transition: .3s;
+            }
+  
+            &:hover {
+              border-bottom: 0;
+              a{
+                transform: translateX(-20px);
+              }
+            }
+          }
+        }
+  
+        &:hover {
+          ul.sub-menu {
+            display: block;
+          }
+        }
+      }
+  
+      &:nth-child(1) {
+        &:hover {
+          border-bottom-color: $blue;
+        }
+      }
+  
+      &:nth-child(2) {
+        &:hover {
+          border-bottom-color: $red;
+        }
+      }
+  
+      &:nth-child(3) {
+        &:hover {
+          border-bottom-color: $orange;
+        }
+      }
+  
+      &:nth-child(4) {
+        &:hover {
+          border-bottom-color: $purple;
+        }
+      }
+  
+      &:nth-child(5) {
+        &:hover {
+          border-bottom-color: $cyan;
+        }
+      }
+  
+      &:nth-child(6) {
+        &:hover {
+          border-bottom-color: $blue;
+        }
+      }
+  
+      &:nth-child(7) {
+        &:hover {
+          border-bottom-color: $red;
+        }
       }
     }
   }
 }
-
