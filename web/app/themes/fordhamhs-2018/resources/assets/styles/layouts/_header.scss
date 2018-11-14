@@ -293,6 +293,10 @@ nav.nav-primary.mobile{
       padding: 100px 20px 50px;
       text-align: left;
 
+      .search.menu-item{
+        display: none;
+      }
+
       & > li{
         width: 100%;
         font-size: 25px;
@@ -325,8 +329,7 @@ nav.nav-primary.mobile{
     }
   }
 
-  .page-header{
-    min-height: 200px;
+  .banner{
 
     .hamburger{
       display: block;
