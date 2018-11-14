@@ -185,7 +185,9 @@ div.gradient{
   }
 
   .tile.is-parent {
-    padding: 0;
+    padding-bottom: 0;
+    padding-top: 0;
+
     &:first-child{
       padding-left: .75em;
     }
@@ -203,13 +205,7 @@ div.gradient{
   #nextEvent{
     position: relative;
     overflow: hidden;
-
-    &:hover{
-      img{
-        transform: translate(-50%, -50%) scale(1.1);
-        opacity: 1;
-      }
-    }
+    min-height: 300px;
 
     a.wrap{
       position: absolute;
@@ -513,6 +509,25 @@ div.gradient{
       }
     }
   }
+
+  /////////////////////////////////
+  //// HOME - TABLET
+  /////////////////////////////////
+
+  .home {
+    .tile.is-parent {
+      padding: 0;
+    }
+
+    #nextEvent{
+      &:hover{
+        img{
+          transform: translate(-50%, -50%) scale(1.1);
+          opacity: 1;
+        }
+      }
+    }
+  }
 }
 
 
@@ -530,6 +545,7 @@ div.gradient{
   /////////////////////////////////
 
   .home {
+
     #banner{
       p{
         font-size: 2.5em;
@@ -546,9 +562,6 @@ div.gradient{
       overflow: hidden;
 
       &:hover{
-        a.wrap{
-          //background: rgba(0,0,0,.5);
-        }
         img{
           transform: translate(-50%, -50%) scale(1.1);
           opacity: 1;

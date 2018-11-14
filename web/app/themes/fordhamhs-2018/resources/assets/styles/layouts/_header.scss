@@ -35,29 +35,13 @@
     border-bottom: solid transparent 5px;
     justify-content: left;
 
-    &.search{
-      &:hover{
-        a:not(.button){
-          color: $yellow;
-        }
-      }
-    }
-
     &.active a:not(.button){
       color: $yellow;
-
-      &:hover{
-        color: $yellow;
-      }
     }
 
     a {
       &:not(.button) {
         color: $white;
-
-        &:hover {
-          color: inherit;
-        }
       }
     }
 
@@ -93,13 +77,6 @@
 
           a{
             transition: .3s;
-          }
-
-          &:hover {
-            border-bottom: 0;
-            a{
-              transform: translateX(-20px);
-            }
           }
         }
       }
@@ -264,6 +241,9 @@ nav.nav-primary.mobile{
 
 
 
+////////////////////////
+// MOBILE
+////////////////////////
 @media only screen and (max-width: 600px) {
   nav.nav-primary.desktop{
     display: none;
@@ -297,6 +277,30 @@ nav.nav-primary.mobile{
         display: none;
       }
 
+      li{
+        &.active a:not(.button){
+          &:hover{
+            color: $yellow;
+          }
+        }
+
+        &.search{
+          &:hover{
+            a:not(.button){
+              color: $yellow;
+            }
+          }
+        }
+
+        a {
+          &:not(.button) {
+            &:hover {
+              color: inherit;
+            }
+          }
+        }
+      }
+
       & > li{
         width: 100%;
         font-size: 25px;
@@ -315,6 +319,15 @@ nav.nav-primary.mobile{
             top: 0;
             padding: 10px 20px;
             z-index: 1;
+
+            li{
+              &:hover {
+                border-bottom: 0;
+                a{
+                  transform: translateX(-20px);
+                }
+              }
+            }
 
             &:before{
               content: none;
