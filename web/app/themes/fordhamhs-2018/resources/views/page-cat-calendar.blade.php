@@ -12,17 +12,17 @@
 
 @section('content')
     <div class="columns is-multiline">
+        
+        <div class="column is-12">
+            @include('partials.page-header')
+        </div>
+
         <div class="column is-8">
-          <div class="page-content">
-            <h1>Calendar of Events</h1>
-
-            <h6>There are currently no upcoming events.</h6>
-          </div>
-
+            @include('partials.content-page')
         </div>
 
         <div class="sidebar column is-4">
-            @php dynamic_sidebar('sidebar-calendar') @endphp
+            @include('partials.sidebar-calendar')
         </div>
 
     </div>

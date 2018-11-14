@@ -29,7 +29,7 @@
             while ( have_rows('images') ) : the_row(); 
             @endphp
 
-                <=-;jmnh-=0 class="slide">
+                <div class="slide">
                     @php  
                     echo '<img src="' . get_sub_field('image') . '" />'; 
                     $caption = get_sub_field('caption');
