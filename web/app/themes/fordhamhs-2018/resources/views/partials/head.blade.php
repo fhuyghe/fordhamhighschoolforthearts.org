@@ -13,5 +13,18 @@
   <meta name="msapplication-config" content="@asset('images/favicon/browserconfig.xml')">
   <meta name="theme-color" content="#ffffff">
 
+  <meta name="google-site-verification" content="X4Ujjv2gIpTvjNbR_3uQPD10YE2qv1NYI3ZNopkRdHY" />
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-74357159-15"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-74357159-15');
+  </script>
+
+
   @php wp_head() @endphp
 </head>
