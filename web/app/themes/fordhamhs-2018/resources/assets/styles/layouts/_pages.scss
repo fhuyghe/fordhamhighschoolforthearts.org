@@ -43,6 +43,17 @@ div.wrap.container {
         }
 
         &.gallery{
+          .slide{
+            img{
+              max-height: 400px;
+              margin: 0 auto;
+            }
+          }
+
+          .slick-prev:before, .slick-next:before{
+            color: #ddd;
+          }
+
           .slick-next{
             right: 20px;
           }
