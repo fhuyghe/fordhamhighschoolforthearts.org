@@ -9,10 +9,16 @@ div.wrap.container {
   margin-top: 65px;
   max-width: 100%;
   width: 100%;
+
+  .tile{
+    flex-basis: auto;
+  }
+
   .infobox{
     background-color: $red;
     color: $white;
     padding: 50px;
+
     h1{
       color: $white;
     }
