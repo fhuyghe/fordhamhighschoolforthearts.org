@@ -25,12 +25,17 @@
             </div>
           </div>
           <div class="tile is-vertical is-parent is-4">
-                      <div id="intro" class="tile is-child has-vertically-aligned-content">
-                        <div class="content">
-                          <p><?php echo carbon_get_the_post_meta( 'audition' ); ?></p>
-                          <a class="button is-outlined is-inverted" href="/admissions">Admissions</a>
+
+                      <div class="flexboxContainer">
+                        <div id="intro" class="tile is-child has-vertically-aligned-content">
+                          <div class="content">
+                            <p><?php echo carbon_get_the_post_meta( 'audition' ); ?></p>
+                            <a class="button is-outlined is-inverted" href="/admissions">Admissions</a>
+                          </div>
                         </div>
                       </div>
+
+                      <div class="flexboxContainer">
                         <div class="tile is-child has-vertically-aligned-content testimonial">
                             <div class="content">
                               <p><?php echo carbon_get_the_post_meta( 'quote' ); ?></p>
@@ -38,6 +43,7 @@
                               <h6><?php echo carbon_get_the_post_meta( 'title' ); ?></h6>
                             </div>
                         </div>
+                      </div>
           </div>
         </div>
         <div class="tile">

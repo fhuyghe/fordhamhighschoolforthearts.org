@@ -77,12 +77,17 @@ a.button.is-inverted {
 .has-vertically-aligned-content {
   display: flex;
   align-items: center;
+  max-width: 100%;
+  //box-sizing: border-box;
 }
 
 .centered{
   display: flex;
   align-items: center;
   justify-content: center;
+  max-width: 100%;
+  //box-sizing: border-box;
+
   .wrap{
     width: 100%;
   }

@@ -1,4 +1,9 @@
 
+//Flexbox Bugs Fixes
+.flexboxContainer{
+  display: flex;
+  flex-direction: column;
+}
 
 div.wrap.container {
   margin-top: 65px;
@@ -344,7 +349,7 @@ div.gradient{
     flex-flow: column wrap;
 
     .image{
-      flex: 1;
+      flex: 1 1 0%;
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -401,7 +406,7 @@ div.gradient{
 
     .eventDate{
       max-width: 75px;
-      flex: 1;
+      flex: 1 1 0%;
       
       span{
         display: none;
@@ -420,7 +425,7 @@ div.gradient{
     }
   
     .eventContent{
-      flex: 1;
+      flex: 1 1 0%;
       padding-left: 20px;
 
     }
