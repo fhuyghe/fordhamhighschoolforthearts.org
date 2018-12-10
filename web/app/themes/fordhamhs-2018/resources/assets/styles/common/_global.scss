@@ -4,6 +4,11 @@ body {
   overflow-x: hidden;
 }
 
+html, body.mce-content-body {
+  /* Fixes Post Editor */
+  height: inherit !important;
+}
+
 //in Admin editor
 body#tinymce{
   background-color: $white;
