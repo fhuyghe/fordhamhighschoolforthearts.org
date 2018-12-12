@@ -14,7 +14,8 @@
 
         elseif( get_row_layout() == 'single_image' ): 
             echo '<section class="image">';
-            echo '<img src="' . get_sub_field('image') . '" />';
+            echo '<img src="' . get_sub_field('image')['url'] . '" />';
+            echo '<h6>' . get_sub_field('image')['title'] . '</h6 >';
             echo '</section>';
 
         elseif( get_row_layout() == 'video' ): 

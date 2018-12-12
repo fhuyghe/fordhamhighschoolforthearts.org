@@ -31,7 +31,19 @@ div.wrap.container {
 
         &.image{
           img{
-            width: 100%;
+            width: auto;
+            max-height: 500px;
+            display: block;
+            margin: auto;
+          }
+
+          h6{
+            font-weight: 100;
+            font-style: italic;
+            text-align: center;
+            color: black;
+            font-size: .8em;
+            margin-top: 5px;
           }
         }
 
